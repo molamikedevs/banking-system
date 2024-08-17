@@ -8,14 +8,14 @@ declare type SearchParamProps = {
 // ========================================
 
 declare type SignUpParams = {
-	firstName?: string
-	lastName?: string
-	address1?: string
-	city?: string
-	state?: string
-	postalCode?: string
-	dateOfBirth?: string
-	ssn?: string
+	firstName: string
+	lastName: string
+	address1: string
+	city: string
+	state: string
+	postalCode: string
+	dateOfBirth: string
+	ssn: string
 	email: string
 	password: string
 }
@@ -215,106 +215,106 @@ declare interface FooterProps {
 }
 
 declare interface RightSidebarProps {
-  user: User;
-  transactions: Transaction[];
-  banks: Bank[] & Account[];
+	user: User
+	transactions: Transaction[]
+	banks: Bank[] & Account[]
 }
 
 declare interface SiderbarProps {
-  user: User;
+	user: User
 }
 
 declare interface RecentTransactionsProps {
-  accounts: Account[];
-  transactions: Transaction[];
-  appwriteItemId: string;
-  page: number;
+	accounts: Account[]
+	transactions: Transaction[]
+	appwriteItemId: string
+	page: number
 }
 
 declare interface TransactionHistoryTableProps {
-  transactions: Transaction[];
-  page: number;
+	transactions: Transaction[]
+	page: number
 }
 
 declare interface CategoryBadgeProps {
-  category: string;
+	category: string
 }
 
 declare interface TransactionTableProps {
-  transactions: Transaction[];
+	transactions: Transaction[]
 }
 
 declare interface CategoryProps {
-  category: CategoryCount;
+	category: CategoryCount
 }
 
 declare interface DoughnutChartProps {
-  accounts: Account[];
+	accounts: Account[]
 }
 
 declare interface PaymentTransferFormProps {
-  accounts: Account[];
+	accounts: Account[]
 }
 
 // Actions
 declare interface getAccountsProps {
-  userId: string;
+	userId: string
 }
 
 declare interface getAccountProps {
-  appwriteItemId: string;
+	appwriteItemId: string
 }
 
 declare interface getInstitutionProps {
-  institutionId: string;
+	institutionId: string
 }
 
 declare interface getTransactionsProps {
-  accessToken: string;
+	accessToken: string
 }
 
 declare interface CreateFundingSourceOptions {
-  customerId: string; // Dwolla Customer ID
-  fundingSourceName: string; // Dwolla Funding Source Name
-  plaidToken: string; // Plaid Account Processor Token
-  _links: object; // Dwolla On Demand Authorization Link
+	customerId: string // Dwolla Customer ID
+	fundingSourceName: string // Dwolla Funding Source Name
+	plaidToken: string // Plaid Account Processor Token
+	_links: object // Dwolla On Demand Authorization Link
 }
 
 declare interface CreateTransactionProps {
-  name: string;
-  amount: string;
-  senderId: string;
-  senderBankId: string;
-  receiverId: string;
-  receiverBankId: string;
-  email: string;
+	name: string
+	amount: string
+	senderId: string
+	senderBankId: string
+	receiverId: string
+	receiverBankId: string
+	email: string
 }
 
 declare interface getTransactionsByBankIdProps {
-  bankId: string;
+	bankId: string
 }
 
 declare interface signInProps {
-  email: string;
-  password: string;
+	email: string
+	password: string
 }
 
 declare interface getUserInfoProps {
-  userId: string;
+	userId: string
 }
 
 declare interface exchangePublicTokenProps {
-  publicToken: string;
-  user: User;
+	publicToken: string
+	user: User
 }
 
 declare interface createBankAccountProps {
-  accessToken: string;
-  userId: string;
-  accountId: string;
-  bankId: string;
-  fundingSourceUrl: string;
-  sharableId: string;
+	accessToken: string
+	userId: string
+	accountId: string
+	bankId: string
+	fundingSourceUrl: string
+	shareableId: string
 }
 
 declare interface getBanksProps {
