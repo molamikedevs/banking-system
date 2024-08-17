@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import Footer from './Footer'
 
 const Sidebar = ({ user }: SiderbarProps) => {
 	const pathname = usePathname()
@@ -21,7 +22,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
 						alt="Online bank"
 					/>
 					<h1 className="sidebar-logo font-ibm-plex-serif 2xl:text-26 text-[26px] font-bold max-xl:hidden">
-						Uni Bank
+						UX Bank
 					</h1>
 				</Link>
 				{sidebarLinks.map(item => {
@@ -51,7 +52,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
 				})}
 				User
 			</nav>
-			User
+			<Footer user={user} type="mobile" />
 		</section>
 	)
 }

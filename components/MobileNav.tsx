@@ -5,9 +5,6 @@ import {
 	Sheet,
 	SheetClose,
 	SheetContent,
-	SheetDescription,
-	SheetHeader,
-	SheetTitle,
 	SheetTrigger,
 } from '@/components/ui/sheet'
 import Image from 'next/image'
@@ -30,7 +27,9 @@ const MobileNav = ({ user }: MobileNavProps) => {
 					/>
 				</SheetTrigger>
 				<SheetContent side="left" className="border-none bg-white">
-					<Link href="/" className="cursor-pointer flex items-center gap-1">
+					<Link
+						href="/"
+						className="cursor-pointer flex items-center gap-1 px-4">
 						<Image
 							src="/icons/logo.svg"
 							width={34}
@@ -38,7 +37,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
 							alt="Online bank"
 						/>
 						<h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
-							Uni Bank
+							UX Bank
 						</h1>
 					</Link>
 

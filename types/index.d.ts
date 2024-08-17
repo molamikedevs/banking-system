@@ -8,174 +8,175 @@ declare type SearchParamProps = {
 // ========================================
 
 declare type SignUpParams = {
-  firstName: string;
-  lastName: string;
-  address1: string;
-  city: string;
-  state: string;
-  postalCode: string;
-  dateOfBirth: string;
-  ssn: string;
-  email: string;
-  password: string;
-};
+	firstName?: string
+	lastName?: string
+	address1?: string
+	city?: string
+	state?: string
+	postalCode?: string
+	dateOfBirth?: string
+	ssn?: string
+	email: string
+	password: string
+}
 
 declare type LoginUser = {
-  email: string;
-  password: string;
-};
+	email: string
+	password: string
+}
 
 declare type User = {
-  $id: string;
-  email: string;
-  userId: string;
-  dwollaCustomerUrl: string;
-  dwollaCustomerId: string;
-  firstName: string;
-  lastName: string;
-  address1: string;
-  city: string;
-  state: string;
-  postalCode: string;
-  dateOfBirth: string;
-  ssn: string;
-};
+	$id: string
+	email: string
+	userId: string
+	dwollaCustomerUrl: string
+	dwollaCustomerId: string
+	firstName: string
+	lastName: string
+	name: string
+	address1: string
+	city: string
+	state: string
+	postalCode: string
+	dateOfBirth: string
+	ssn: string
+}
 
 declare type NewUserParams = {
-  userId: string;
-  email: string;
-  name: string;
-  password: string;
-};
+	userId: string
+	email: string
+	name: string
+	password: string
+}
 
 declare type Account = {
-  id: string;
-  availableBalance: number;
-  currentBalance: number;
-  officialName: string;
-  mask: string;
-  institutionId: string;
-  name: string;
-  type: string;
-  subtype: string;
-  appwriteItemId: string;
-  sharableId: string;
-};
+	id: string
+	availableBalance: number
+	currentBalance: number
+	officialName: string
+	mask: string
+	institutionId: string
+	name: string
+	type: string
+	subtype: string
+	appwriteItemId: string
+	sharableId: string
+}
 
 declare type Transaction = {
-  id: string;
-  $id: string;
-  name: string;
-  paymentChannel: string;
-  type: string;
-  accountId: string;
-  amount: number;
-  pending: boolean;
-  category: string;
-  date: string;
-  image: string;
-  type: string;
-  $createdAt: string;
-  channel: string;
-  senderBankId: string;
-  receiverBankId: string;
-};
+	id: string
+	$id: string
+	name: string
+	paymentChannel: string
+	type: string
+	accountId: string
+	amount: number
+	pending: boolean
+	category: string
+	date: string
+	image: string
+	type: string
+	$createdAt: string
+	channel: string
+	senderBankId: string
+	receiverBankId: string
+}
 
 declare type Bank = {
-  $id: string;
-  accountId: string;
-  bankId: string;
-  accessToken: string;
-  fundingSourceUrl: string;
-  userId: string;
-  sharableId: string;
-};
+	$id: string
+	accountId: string
+	bankId: string
+	accessToken: string
+	fundingSourceUrl: string
+	userId: string
+	sharableId: string
+}
 
 declare type AccountTypes =
-  | "depository"
-  | "credit"
-  | "loan "
-  | "investment"
-  | "other";
+	| 'depository'
+	| 'credit'
+	| 'loan '
+	| 'investment'
+	| 'other'
 
-declare type Category = "Food and Drink" | "Travel" | "Transfer";
+declare type Category = 'Food and Drink' | 'Travel' | 'Transfer'
 
 declare type CategoryCount = {
-  name: string;
-  count: number;
-  totalCount: number;
-};
+	name: string
+	count: number
+	totalCount: number
+}
 
 declare type Receiver = {
-  firstName: string;
-  lastName: string;
-};
+	firstName: string
+	lastName: string
+}
 
 declare type TransferParams = {
-  sourceFundingSourceUrl: string;
-  destinationFundingSourceUrl: string;
-  amount: string;
-};
+	sourceFundingSourceUrl: string
+	destinationFundingSourceUrl: string
+	amount: string
+}
 
 declare type AddFundingSourceParams = {
-  dwollaCustomerId: string;
-  processorToken: string;
-  bankName: string;
-};
+	dwollaCustomerId: string
+	processorToken: string
+	bankName: string
+}
 
 declare type NewDwollaCustomerParams = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  type: string;
-  address1: string;
-  city: string;
-  state: string;
-  postalCode: string;
-  dateOfBirth: string;
-  ssn: string;
-};
+	firstName: string
+	lastName: string
+	email: string
+	type: string
+	address1: string
+	city: string
+	state: string
+	postalCode: string
+	dateOfBirth: string
+	ssn: string
+}
 
 declare interface CreditCardProps {
-  account: Account;
-  userName: string;
-  showBalance?: boolean;
+	account: Account
+	userName: string
+	showBalance?: boolean
 }
 
 declare interface BankInfoProps {
-  account: Account;
-  appwriteItemId?: string;
-  type: "full" | "card";
+	account: Account
+	appwriteItemId?: string
+	type: 'full' | 'card'
 }
 
 declare interface HeaderBoxProps {
-  type?: "title" | "greeting";
-  title: string;
-  subtext: string;
-  user?: string;
+	type?: 'title' | 'greeting'
+	title: string
+	subtext: string
+	user?: string
 }
 
 declare interface MobileNavProps {
-  user: User;
+	user: User
 }
 
 declare interface PageHeaderProps {
-  topTitle: string;
-  bottomTitle: string;
-  topDescription: string;
-  bottomDescription: string;
-  connectBank?: boolean;
+	topTitle: string
+	bottomTitle: string
+	topDescription: string
+	bottomDescription: string
+	connectBank?: boolean
 }
 
 declare interface PaginationProps {
-  page: number;
-  totalPages: number;
+	page: number
+	totalPages: number
 }
 
 declare interface PlaidLinkProps {
-  user: User;
-  variant?: "primary" | "ghost";
-  dwollaCustomerId?: string;
+	user: User
+	variant?: 'primary' | 'ghost'
+	dwollaCustomerId?: string
 }
 
 // declare type User = sdk.Models.Document & {
@@ -188,28 +189,29 @@ declare interface PlaidLinkProps {
 // };
 
 declare interface AuthFormProps {
-  type: "sign-in" | "sign-up";
+	type: 'sign-in' | 'sign-up'
 }
 
 declare interface BankDropdownProps {
-  accounts: Account[];
-  setValue?: UseFormSetValue<any>;
-  otherStyles?: string;
+	accounts: Account[]
+	setValue?: UseFormSetValue<any>
+	otherStyles?: string
 }
 
 declare interface BankTabItemProps {
-  account: Account;
-  appwriteItemId?: string;
+	account: Account
+	appwriteItemId?: string
 }
 
 declare interface TotlaBalanceBoxProps {
-  accounts: Account[];
-  totalBanks: number;
-  totalCurrentBalance: number;
+	accounts: Account[]
+	totalBanks: number
+	totalCurrentBalance: number
 }
 
 declare interface FooterProps {
-  user: User;
+	user: User
+	type: 'mobile' | 'desktop'
 }
 
 declare interface RightSidebarProps {
