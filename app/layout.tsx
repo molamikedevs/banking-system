@@ -10,7 +10,10 @@ const ibmPlexSerif = IBM_Plex_Serif({
 })
 
 export const metadata: Metadata = {
-	title: 'UX Bank',
+	title: {
+		template: '%s | UX Bank',
+		default: 'UX Bank',
+	},
 	description:
 		'Online banking system with the latest services available to your needs',
 	icons: {

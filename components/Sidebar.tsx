@@ -1,10 +1,12 @@
 'use client'
+
 import { sidebarLinks } from '@/constants'
 import { cn } from '@/lib/utils'
-import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { usePathname } from 'next/navigation'
+
+import PlaidLink from './PlaidLink'
 import Footer from './Footer'
 
 const Sidebar = ({ user }: SiderbarProps) => {
@@ -12,19 +14,18 @@ const Sidebar = ({ user }: SiderbarProps) => {
 
 	return (
 		<section className="sidebar">
-			<nav className="flex flex-col gap-4 bg-white">
+			<nav className="flex flex-col gap-4">
 				<Link href="/" className="mb-12 cursor-pointer flex items-center gap-2">
 					<Image
-						className="size-[24px] max-xl:size-14"
 						src="/icons/logo.svg"
 						width={34}
 						height={34}
-						alt="Online bank"
+						alt="Horizon logo"
+						className="size-[24px] max-xl:size-14"
 					/>
-					<h1 className="sidebar-logo font-ibm-plex-serif 2xl:text-26 text-[26px] font-bold max-xl:hidden">
-						UX Bank
-					</h1>
+					<h1 className="sidebar-logo">Horizon</h1>
 				</Link>
+
 				{sidebarLinks.map(item => {
 					const isActive =
 						pathname === item.route || pathname.startsWith(`${item.route}/`)
@@ -50,8 +51,10 @@ const Sidebar = ({ user }: SiderbarProps) => {
 						</Link>
 					)
 				})}
-				User
+
+				<PlaidLink user={user} />
 			</nav>
+
 			<Footer user={user} type="mobile" />
 		</section>
 	)
